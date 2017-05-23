@@ -15,64 +15,6 @@
     <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-
-    <!-- style -->
-    <style>
-      .bullet { font: 10px sans-serif; }
-      .bullet .marker { stroke: #000; stroke-width: 2px; }
-      .bullet .tick line { stroke: #666; stroke-width: .5px; }
-      .bullet .range.s0 { fill: #eee; }
-      .bullet .range.s1 { fill: #ddd; }
-      .bullet .range.s2 { fill: #ccc; }
-      .bullet .measure.s0 { fill: lightsteelblue; }
-      .bullet .measure.s1 { fill: steelblue; }
-      .bullet .title { font-size: 14px; font-weight: bold; }
-      .bullet .subtitle { fill: #999; }
-      body {
-        font: 10px sans-serif;
-      }
-      .axis path,
-      .axis line {
-        fill: none;
-        stroke: #000;
-        shape-rendering: crispEdges;
-      }
-      .bar {
-        fill: orange;
-      }
-      .bar:hover {
-        fill: orangered ;
-      }
-      .x.axis path {
-        display: none;
-      }
-      .d3-tip {
-        line-height: 1;
-        font-weight: bold;
-        padding: 12px;
-        background: rgba(0, 0, 0, 0.8);
-        color: #fff;
-	border-radius: 2px;
-      }
-      /* Creates a small triangle extender for the tooltip */
-      .d3-tip:after {
-        box-sizing: border-box;
-        display: inline;
-        font-size: 10px;
-        width: 100%;
-        line-height: 1;
-        color: rgba(0, 0, 0, 0.8);
-        content: "\25BC";
-        position: absolute;
-        text-align: center;
-      }
-      /* Style northward tooltips differently */
-      .d3-tip.n:after {
-        margin: -1px 0 0 0;
-        top: 100%;
-        left: 0;
-      }
-    </style>
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
