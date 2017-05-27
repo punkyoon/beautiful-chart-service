@@ -1,6 +1,4 @@
 // for live
-
-//sorting bug
 var circle = Highcharts.chart('container', {
     chart: {
         type: 'solidgauge',
@@ -47,14 +45,12 @@ var circle = Highcharts.chart('container', {
             borderWidth: 0
         }]
     },
-
     yAxis: {
         min: 0,
         max: 100,
         lineWidth: 0,
         tickPositions: []
     },
-
     plotOptions: {
         solidgauge: {
             dataLabels: {
@@ -65,7 +61,6 @@ var circle = Highcharts.chart('container', {
             rounded: true
         }
     },
-
     series: [{
         name: 'Active-mass',
         data: [{
@@ -97,7 +92,6 @@ var circle = Highcharts.chart('container', {
  * In the chart load callback, add icons on top of the circular shapes
  */
 function callback() {
-
     // Move icon
     this.renderer.path(['M', -8, 0, 'L', 8, 0, 'M', 0, -8, 'L', 8, 0, 0, 8])
         .attr({
@@ -109,7 +103,6 @@ function callback() {
         })
         .translate(190, 26)
         .add(this.series[2].group);
-
     // Exercise icon
     this.renderer.path(['M', -8, 0, 'L', 8, 0, 'M', 0, -8, 'L', 8, 0, 0, 8,
             'M', 8, -8, 'L', 16, 0, 8, 8])
@@ -122,7 +115,6 @@ function callback() {
         })
         .translate(190, 61)
         .add(this.series[2].group);
-
     // Stand icon
     this.renderer.path(['M', 0, 8, 'L', 0, -8, 'M', -8, 0, 'L', 0, -8, 8, 0])
         .attr({

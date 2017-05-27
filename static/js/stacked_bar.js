@@ -7,7 +7,7 @@ var stacked_bar = Highcharts.chart('container', {
         text: ''
     },
     xAxis: {
-        categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        categories: ['0-6', '6-12', '12-18', '18-24']
     },
     yAxis: {
         min: 0,
@@ -38,12 +38,12 @@ var stacked_bar = Highcharts.chart('container', {
     },
     series: [{
         name: 'Play',
-        data: [5, 3, 4, 7, 2, 2, 3]
+        data: [5, 3, 4, 7]
     }, {
         name: 'Rest',
-        data: [2, 2, 3, 2, 1, 4, 5]
+        data: [2, 2, 3, 2]
     }, {
         name: 'Active',
-        data: [3, 4, 4, 2, 5, 2, 2]
+        data: [3, 4, 4, 2]
     }]
 });

@@ -1,28 +1,19 @@
-// update 참고용
-
-var chart = Highcharts.chart('container', {
-
+// weekly
+var bar = Highcharts.chart('container', {
     title: {
-        text: 'Chart.update'
+        text: 'Weekly Report'
     },
-
-    subtitle: {
-        text: 'Plain'
-    },
-
     xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
     },
-
     series: [{
         type: 'column',
+        name: 'active-mass',
         colorByPoint: true,
-        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
-        showInLegend: false
+        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 177.0],
+        showInLegend: false,
     }]
-
 });
-
 
 $('#plain').click(function () {
     chart.update({
