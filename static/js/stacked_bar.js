@@ -1,4 +1,4 @@
-// for weekly
+// for daily
 var stacked_bar = Highcharts.chart('container', {
     chart:{
         type: 'column'
@@ -35,12 +35,12 @@ var stacked_bar = Highcharts.chart('container', {
     },
     series: [{
         name: 'Play',
-        data: [5, 3, 4, 7, 2]
+        data: [5, 3, 4, 7, 2, 223, 343]
     }, {
         name: 'Rest',
-        data: [2, 2, 3, 2, 1]
+        data: [2, 2, 3, 2, 1, 300, 34]
     }, {
-        name: 'Wed',
-        data: [3, 4, 4, 2, 5]
+        name: 'Active',
+        data: [3, 4, 4, 2, 5, 400, 2]
     }]
 });

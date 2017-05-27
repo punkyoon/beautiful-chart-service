@@ -1,4 +1,6 @@
 // for live
+
+//이상하다?!
 var play_pie = Highcharts.chart('container', {
     charts: {
         plotBackgroundColor: null,

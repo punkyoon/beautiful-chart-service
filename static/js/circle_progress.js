@@ -1,40 +1,11 @@
+// for live
 
-// Uncomment to style it like Apple Watch
-/*
-if (!Highcharts.theme) {
-    Highcharts.setOptions({
-        chart: {
-            backgroundColor: 'black'
-        },
-        colors: ['#F62366', '#9DFF02', '#0CCDD6'],
-        title: {
-            style: {
-                color: 'silver'
-            }
-        },
-        tooltip: {
-            style: {
-                color: 'silver'
-            }
-        }
-    });
-}
-// */
-
-Highcharts.chart('container', {
-
+//sorting bug
+var circle = Highcharts.chart('container', {
     chart: {
         type: 'solidgauge',
         marginTop: 50
     },
-
-    title: {
-        text: 'Activity',
-        style: {
-            fontSize: '24px'
-        }
-    },
-
     tooltip: {
         borderWidth: 0,
         backgroundColor: 'none',
@@ -50,7 +21,6 @@ Highcharts.chart('container', {
             };
         }
     },
-
     pane: {
         startAngle: 0,
         endAngle: 360,
@@ -97,7 +67,7 @@ Highcharts.chart('container', {
     },
 
     series: [{
-        name: 'Move',
+        name: 'Active-mass',
         data: [{
             color: Highcharts.getOptions().colors[0],
             radius: '112%',
@@ -105,7 +75,7 @@ Highcharts.chart('container', {
             y: 80
         }]
     }, {
-        name: 'Exercise',
+        name: 'test',
         data: [{
             color: Highcharts.getOptions().colors[1],
             radius: '87%',
@@ -113,7 +83,7 @@ Highcharts.chart('container', {
             y: 65
         }]
     }, {
-        name: 'Stand',
+        name: 'test',
         data: [{
             color: Highcharts.getOptions().colors[2],
             radius: '62%',
@@ -165,3 +135,25 @@ function callback() {
         .translate(190, 96)
         .add(this.series[2].group);
 });
+
+// Uncomment to style it like Apple Watch
+/*
+if (!Highcharts.theme) {
+    Highcharts.setOptions({
+        chart: {
+            backgroundColor: 'black'
+        },
+        colors: ['#F62366', '#9DFF02', '#0CCDD6'],
+        title: {
+            style: {
+                color: 'silver'
+            }
+        },
+        tooltip: {
+            style: {
+                color: 'silver'
+            }
+        }
+    });
+}
+// */

@@ -8,6 +8,7 @@
 
     <!-- Bootstrap and libraries -->
     <link rel="stylesheet" href="/static/css/default.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -18,7 +19,7 @@
   </head>
   <body>
     <!-- navigation bar -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="border-radius:0em;">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="/">PET BUDDY</a>
@@ -32,10 +33,12 @@
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
-
-    <div class="jumbotron box" style="margin-top:20vh">
-      <h1>Server Error!</h1>
-      <small>Error 500</small>
-    </div>
+    <button type="button" class="btn btn-default btn-lg" id="refresh">
+        <i class="fa fa-refresh" aria-hidden="true"></i> Refresh
+    </button>
+    <div id="container"></div>
+    
+    <script src="/static/js/pie.js"></script>
+    <script src="/static/js/websocket.js"></script>  
   </body>
 </html>
