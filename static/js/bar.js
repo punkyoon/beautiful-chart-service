@@ -1,3 +1,5 @@
+// update 참고용
+
 var chart = Highcharts.chart('container', {
 
     title: {

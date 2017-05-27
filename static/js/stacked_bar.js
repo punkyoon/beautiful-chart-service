@@ -1,18 +1,13 @@
-Highcharts.chart('container', {
-    chart: {
+// for weekly
+var stacked_bar = Highcharts.chart('container', {
+    chart:{
         type: 'column'
     },
-    title: {
-        text: 'Stacked column chart'
-    },
     xAxis: {
-        categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+        categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
     },
     yAxis: {
-        min: 0,
-        title: {
-            text: 'Total fruit consumption'
-        }
+        min: 0
     },
     tooltip: {
         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
@@ -23,14 +18,29 @@ Highcharts.chart('container', {
             stacking: 'percent'
         }
     },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+    },
     series: [{
-        name: 'John',
+        name: 'Play',
         data: [5, 3, 4, 7, 2]
     }, {
-        name: 'Jane',
+        name: 'Rest',
         data: [2, 2, 3, 2, 1]
     }, {
-        name: 'Joe',
+        name: 'Wed',
         data: [3, 4, 4, 2, 5]
     }]
 });

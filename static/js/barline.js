@@ -1,3 +1,5 @@
+// combination chart 참고용
+
 Highcharts.chart('container', {
     chart: {
         zoomType: 'xy'
