@@ -1,12 +1,14 @@
 // for live
-
-//이상하다?!
-var play_pie = Highcharts.chart('container', {
-    charts: {
+// Build the chart
+var pie_active = Highcharts.chart('container', {
+    chart: {
         plotBackgroundColor: null,
         plotBorderWidth: null,
         plotShadow: false,
         type: 'pie'
+    },
+    title: {
+        text: 'Active'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -22,41 +24,7 @@ var play_pie = Highcharts.chart('container', {
         }
     },
     series: [{
-        name: 'Brands',
-        colorByPoint: true,
-        data: [{
-            name: 'Play',
-            y: 56.33,
-            sliced: true,
-            selected: true
-        }, {
-            y: 24.03,
-        }]
-    }]
-});
-
-var active_pie = Highcharts.chart('container', {
-    charts: {
-        plotBackgroundColor: null,
-        plotBorderWidth: null,
-        plotShadow: false,
-        type: 'pie'
-    },
-    tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-    },
-    plotOptions: {
-        pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            dataLabels: {
-                enabled: false
-            },
-            showInLegend: true
-        }
-    },
-    series: [{
-        name: 'Brands',
+        name: 'value',
         colorByPoint: true,
         data: [{
             name: 'Active',
@@ -64,6 +32,45 @@ var active_pie = Highcharts.chart('container', {
             sliced: true,
             selected: true
         }, {
+            name: 'Rest',
+            y: 24.03,
+        }]
+    }]
+});
+
+var pie_play = Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Play'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: false
+            },
+            showInLegend: true
+        }
+    },
+    series: [{
+        name: 'value',
+        colorByPoint: true,
+        data: [{
+            name: 'Play',
+            y: 56.33,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Rest',
             y: 24.03,
         }]
     }]
