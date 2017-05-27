@@ -9,79 +9,40 @@
     <!-- Bootstrap and libraries -->
     <link rel="stylesheet" href="/static/css/default.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
-    <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
-    <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
-    <script src="//d3js.org/d3.v3.min.js"></script>
-    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- navigation bar -->
+    <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/" style="color: white">Live Chart Service</a>
+          <a class="navbar-brand" href="/">PET BUDDY</a>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active" id="live"><a href="#live">Live Report<span class="sr-only">(current)</span></a></li>
+            <li id="daily"><a href="#daily">Daily Report</a></li>
+            <li id="weekly"><a href="#weekly">Weekly Report</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
       </div>
-    </div>
-
-    <!-- padding -->
-    <div style="height: 90px"></div>
-
-    <!-- buttons -->
-    <div class="btn-group" role="group" style="padding-left: 15px">
-      <button class="btn btn-default btn-lg" id="changeButton">start</button>
-      <button class="btn btn-default btn-lg" id="resetButton" onclick="reset()">reset</button>
-    </div>
-
-    <!-- temporary lines for progress_chart.js
-    <div class="widget">
-      <div class="header">Progress Status</div>
-      <div id="chart" class="chart-container"></div>
-    </div>
-    -->
+    </nav>
 
     <div class="container-fluid">
       <!-- Example row of columns -->
       <div class="row">
+        <h1>sdf</h1>
         <!-- chart1 - rest, walk, fast_walk -->
         <div class="container-fluid" id="data-container"></div>
         <!-- chart2 - energy(e) -->
         <div class="container-fluid" id="data-container2"></div>
         <!-- websocket code -->
-        <script src="/static/js/charts.js"></script>
-        <script type="text/javascript">
-          $(document).ready(function(){
-            var sock = io.connect('http://localhost:8000');
-            sock.on('draw', function(data){
-              if($('#changeButton').html() == 'stop'){
-                // get data
-                rest = data['rest_time'];
-                walk = data['walk_time'];
-                fast_walk = data['fast_walk_time'];
-                e = data['e'];
-                
-                // updating chart (live)
-                updateChart(rest, walk, fast_walk);
-                updateChart2(e);
-              }
-            });
-            // change mode
-            $('#changeButton').on('click', function(){
-              // change mode: stop -> start
-              if($('#changeButton').html() == 'start'){
-                $('#changeButton').html('stop');
-                sock.emit('change mode', {'mode': 'start'});
-              }
-              // change mode: start -> stop
-              else{
-                $('#changeButton').html('start');
-                sock.emit('change mode', {'mode': 'stop'});
-              }
-            });
-          });
-        </script>
+        
       </div>
     </div>
   </body>
