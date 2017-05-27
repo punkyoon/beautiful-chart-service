@@ -1,0 +1,16 @@
+.full{
+  background: white no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  height:100%;
+}
+.box {
+  background: #b4dbfd;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  max-width:400px;
+}
