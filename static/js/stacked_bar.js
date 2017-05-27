@@ -3,11 +3,14 @@ var stacked_bar = Highcharts.chart('container', {
     chart:{
         type: 'column'
     },
+    title: {
+        text: ''
+    },
     xAxis: {
         categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
     },
     yAxis: {
-        min: 0
+        min: 0,
     },
     tooltip: {
         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
@@ -15,7 +18,7 @@ var stacked_bar = Highcharts.chart('container', {
     },
     plotOptions: {
         column: {
-            stacking: 'percent'
+            stacking: 'normal'
         }
     },
     legend: {
@@ -35,12 +38,12 @@ var stacked_bar = Highcharts.chart('container', {
     },
     series: [{
         name: 'Play',
-        data: [5, 3, 4, 7, 2, 223, 343]
+        data: [5, 3, 4, 7, 2, 2, 3]
     }, {
         name: 'Rest',
-        data: [2, 2, 3, 2, 1, 300, 34]
+        data: [2, 2, 3, 2, 1, 4, 5]
     }, {
         name: 'Active',
-        data: [3, 4, 4, 2, 5, 400, 2]
+        data: [3, 4, 4, 2, 5, 2, 2]
     }]
 });
