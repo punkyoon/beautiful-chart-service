@@ -1,5 +1,4 @@
 // for live
-// Build the chart
 var pie_active = Highcharts.chart('container', {
     chart: {
         plotBackgroundColor: null,

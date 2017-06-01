@@ -127,25 +127,3 @@ function callback() {
         .translate(190, 96)
         .add(this.series[2].group);
 });
-
-// Uncomment to style it like Apple Watch
-/*
-if (!Highcharts.theme) {
-    Highcharts.setOptions({
-        chart: {
-            backgroundColor: 'black'
-        },
-        colors: ['#F62366', '#9DFF02', '#0CCDD6'],
-        title: {
-            style: {
-                color: 'silver'
-            }
-        },
-        tooltip: {
-            style: {
-                color: 'silver'
-            }
-        }
-    });
-}
-// */
