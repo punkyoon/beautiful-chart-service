@@ -1,22 +1,39 @@
 $(document).ready(function(){
-    var sock = io.connect('http://localhost:8000');
-    //var sock = io.connect('http://');
+    var _mode = 1
+    //var sock = io.connect('http://localhost:8000');
+    var sock = io.connect('http://52.231.53.33:80');
     
-    sock.on('chageMode', function(data){
-        // updating chart (live)
-        //updateChart(rest, walk, fast_walk);
-        //updateChart2(e);
+    sock.on('draw', function(data){
+        if (_mode===1){
+            console.log('mode 1');
+            //updatePie();
+        }
+        else if (_mode===2){
+            console.log('mode 2');
+            //updateStackedBar();
+        }
+        else{
+            console.log('mode 3');
+            //updateBar();
+        }
     });
+
     // change mode
     $('#live').on('click', function(){
-        //dev..
+        // pie.js
+        _mode = 1
+        sock.emit('change', {'mode': 1});
     });
 
     $('#daily').on('click', function(){
-        //dev..
+        // stacked_bar.js
+        _mode = 2
+        sock.emit('change', {'mode': 2});
     });
     
     $('#weekly').on('click', function(){
-        //dev..
+        // bar.js
+        _mode = 3
+        sock.emit('change', {'mode': 3});
     });
 });
