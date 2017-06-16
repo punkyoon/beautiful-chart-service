@@ -16,10 +16,10 @@ def draw():
 
 # Chaninging Mode
 @socket_io.on('change mode')
-def changer(data):
+def change_mode(data):
     global _mode
-    
-    print('receive data: ' + str(data))
+
+    print('receive data: '+str(data))
     # emit('draw', data, broadcast=True)
 
 if __name__ == '__main__':
