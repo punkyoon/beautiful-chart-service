@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var _mode = 1
     //var sock = io.connect('http://localhost:8000');
-    var sock = io.connect('http://52.231.53.33:80');
+    var sock = io.connect('http://52.231.35.33');
     
     sock.on('draw', function(data){
         if (_mode===1){
