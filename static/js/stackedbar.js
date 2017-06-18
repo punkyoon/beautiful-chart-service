@@ -1,10 +1,10 @@
 // daily
 
-var chart = bb.generate({
-  "data": {
-    "columns": [
+var daily = bb.generate({
+  'data': {
+    'columns': [
       [
-        "data1",
+        'data1',
         -30,
         200,
         200,
@@ -13,7 +13,7 @@ var chart = bb.generate({
         250
       ],
       [
-        "data2",
+        'data2',
         130,
         100,
         -100,
@@ -22,7 +22,7 @@ var chart = bb.generate({
         50
       ],
       [
-        "data3",
+        'data3',
         -230,
         200,
         200,
@@ -31,26 +31,28 @@ var chart = bb.generate({
         250
       ]
     ],
-    "type": "bar",
-    "groups": [
+    'type': 'bar',
+    'groups': [
       [
-        "data1",
-        "data2"
+        'data1',
+        'data2',
+        'data3'
       ]
     ]
   },
-  "grid": {
-    "y": {
-      "lines": [
+  'grid': {
+    'y': {
+      'lines': [
         {
-          "value": 0
+          'value': 0
         }
       ]
     }
   },
-  "bindto": "#StackedBarChart"
+  'bindto': '#chart'
 });
 
+/*
 setTimeout(function () {
 	chart.groups([['data1', 'data2', 'data3']])
 }, 1000);
@@ -64,3 +66,4 @@ setTimeout(function () {
 setTimeout(function () {
 	chart.groups([['data1', 'data2', 'data3', 'data4']])
 }, 2000);
+*/

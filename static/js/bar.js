@@ -1,10 +1,10 @@
 // weekly
 
-var chart = bb.generate({
-  "data": {
-    "columns": [
+var weekly = bb.generate({
+  'data': {
+    'columns': [
       [
-        "data1",
+        'data1',
         30,
         200,
         100,
@@ -12,26 +12,18 @@ var chart = bb.generate({
         150,
         250
       ],
-      [
-        "data2",
-        130,
-        100,
-        140,
-        200,
-        150,
-        50
-      ]
     ],
-    "type": "bar"
+    'type': 'bar'
   },
-  "bar": {
-    "width": {
-      "ratio": 0.5
+  'bar': {
+    'width': {
+      'ratio': 0.5
     }
   },
-  "bindto": "#BarChart"
+  'bindto': '#chart'
 });
 
+/*
 setTimeout(function () {
 	chart.load({
 		columns: [
@@ -39,3 +31,4 @@ setTimeout(function () {
 		]
 	});
 }, 1000);
+*/
