@@ -1,3 +1,5 @@
+// live
+
 var chart = bb.generate({
   "data": {
     "columns": [

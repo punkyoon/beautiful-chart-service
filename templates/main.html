@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="/static/css/font-awesome.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <!-- JS -->
-    <script type="text/javascript"src="/static/js/billboard.min.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="/static/js/billboard.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>  
   </head>
@@ -32,19 +33,20 @@
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
+    
     <a class="btn btn-default btn-lg" id="refresh" href="javascript:location.reload(true)">
         <i class="fa fa-refresh" aria-hidden="true"></i> Refresh
     </a>
-    <div id="container" style="width: 1000px; height: 400px; margin: 0 auto"></div>
+
+    <div id="chart" style="width: 1000px; height: 400px; margin: 0 auto"></div>
     
     <!--live
-    <script src="/static/js/circle_progress.js"></script>
-    <script src="/static/js/pie.js"></script>
+    <script src="/static/js/donut.js"></script>
     -->
     
 
-    <!--daliy-
-    <script src="/static/js/stacked_bar.js"></script>
+    <!--daliy
+    <script src="/static/js/stackedbar.js"></script>
     -->
 
     <!--weekly
