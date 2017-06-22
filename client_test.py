@@ -5,18 +5,23 @@ from socketIO_client import SocketIO, LoggingNamespace
 '''
 data format
 example = {
-    'weekly': [x, x, x, x, x, x, x],
-    'daily':{'Play': x, 'Rest': x, 'Active': x},
+    'weekly': ['weekly', x, x, x, x, x, x, x],
+    'daily':{
+        'Play': ['Play', x],
+        'Rest': ['Rest', x],
+        'Active': ['Active', x]
+    },
     'live': {
-        'active_chart': {'Active': x, 'Rest': x},
-        'play_chart': {'Play': x, 'Rest': x}
+        ['Play', x],
+        ['Rest', x],
+        ['Active', x]
     }
 }
 '''
 
 while True:
-    #with SocketIO('localhost', 8000, LogginNamespace) as SocketIO:
-    with SocketIO('52.231.53.33', 80, LoggingNamespace) as SocketIO:
+    #with SocketIO('localhost', 8000, LogginNamespace) as socketIO:
+    with SocketIO('52.231.53.33', 80, LoggingNamespace) as socketIO:
         send_data = {
             'weekly': [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 177.0],
             'daily': {'Play': 20, 'Rest': 40, 'Active': 24},

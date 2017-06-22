@@ -23,6 +23,14 @@ var weekly = bb.generate({
   'bindto': '#chart'
 });
 
+var updateBar = function(data){
+  weekly.load({
+    columns: [
+      data
+    ]
+  });
+};
+
 /*
 setTimeout(function () {
 	chart.load({

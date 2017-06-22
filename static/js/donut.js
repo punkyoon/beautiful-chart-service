@@ -23,6 +23,14 @@ var live = bb.generate({
   'bindto': '#chart'
 });
 
+var updateDonut = function(data1, data2, data3){
+  live.load({
+    columns: [
+      data1, data2, data3
+    ]
+  });
+};
+
 /*
 setTimeout(function () {
 	chart.load({

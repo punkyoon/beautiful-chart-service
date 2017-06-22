@@ -6,7 +6,7 @@ $(document).ready(function(){
     sock.on('draw', function(data){
         if (_mode===1){
             console.log('mode 1');
-            //updatePie();
+            //updateDonut();
         }
         else if (_mode===2){
             console.log('mode 2');

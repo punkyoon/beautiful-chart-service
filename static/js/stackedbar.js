@@ -52,6 +52,16 @@ var daily = bb.generate({
   'bindto': '#chart'
 });
 
+var updateStackedBar = function(data1, data2, data3){
+  daily.groups([[data1[0], data2[0], data3[0]]]);
+
+  daily.load({
+    columns: [
+      data1, data2, data3
+    ]
+  });
+};
+
 /*
 setTimeout(function () {
 	chart.groups([['data1', 'data2', 'data3']])
