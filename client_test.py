@@ -20,7 +20,7 @@ example = {
 '''
 
 while True:
-    with SocketIO('localhost', 8000, LogginNamespace) as socketIO:
+    with SocketIO('localhost', 8000, LoggingNamespace) as socketIO:
     #with SocketIO('52.231.53.33', 80, LoggingNamespace) as socketIO:
         send_data = {
             'weekly': ['weekly', 24, 50, 10, 30, 16, 40, 5],
@@ -30,9 +30,9 @@ while True:
                 'Active': ['Active', 20]
             },
             'live': {
-                'Play': ['Play', 20],
-                'Rest': ['Rest', 60],
-                'Active': ['Active', 20]
+                'Play': ['Play', 30],
+                'Rest': ['Rest', 20],
+                'Active': ['Active', 50]
             }
         }
 

@@ -1,27 +1,6 @@
 // live
 
-var live = bb.generate({
-  'data': {
-    'columns': [
-      [
-        'data1',
-        50
-      ],
-      [
-        'data2',
-        50
-      ]
-    ],
-    'type': 'donut',
-    'onclick': function (d, i) { console.log('onclick', d, i); },
-    'onmouseover': function (d, i) { console.log('onmouseover', d, i); },
-    'onmouseout': function (d, i) { console.log('onmouseout', d, i); }
-  },
-  'donut': {
-    'title': 'Iris Petal Width'
-  },
-  'bindto': '#chart'
-});
+var live;
 
 var updateDonut = function(data1, data2, data3){
   live.load({
@@ -29,6 +8,26 @@ var updateDonut = function(data1, data2, data3){
       data1, data2, data3
     ]
   });
+};
+
+var clearDonut = function(){
+  live = bb.generate({
+  'data': {
+      'columns': [],
+      'type': 'donut',
+      'onclick': function (d, i) { console.log('onclick', d, i); },
+      'onmouseover': function (d, i) { console.log('onmouseover', d, i); },
+      'onmouseout': function (d, i) { console.log('onmouseout', d, i); }
+    },
+    'donut': {
+      'title': 'Live data'
+    },
+    'bindto': '#chart'
+  });
+};
+
+var destroyDonut = function(){
+  live.destroy();
 };
 
 /*

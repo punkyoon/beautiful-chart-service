@@ -21,6 +21,13 @@ def change_mode(data):
     global _mode
 
     print('receive data: '+str(data))
+    #emit('draw', data, broadcast=True)
+
+@socket_io.on('data')
+def draw_data(data):
+    global _mode
+
+    print('receive data: '+str(data))
     emit('draw', data, broadcast=True)
 
 if __name__ == '__main__':

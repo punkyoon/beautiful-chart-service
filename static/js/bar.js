@@ -1,27 +1,6 @@
 // weekly
 
-var weekly = bb.generate({
-  'data': {
-    'columns': [
-      [
-        'data1',
-        30,
-        200,
-        100,
-        400,
-        150,
-        250
-      ],
-    ],
-    'type': 'bar'
-  },
-  'bar': {
-    'width': {
-      'ratio': 0.5
-    }
-  },
-  'bindto': '#chart'
-});
+var weekly;
 
 var updateBar = function(data){
   weekly.load({
@@ -29,6 +8,25 @@ var updateBar = function(data){
       data
     ]
   });
+};
+
+var clearBar = function(){
+  weekly = bb.generate({
+    'data': {
+      'columns': [],
+      'type': 'bar'
+    },
+    'bar': {
+      'width': {
+        'ratio': 0.5
+      }
+    },
+    'bindto': '#chart'
+  });
+};
+
+var destroyBar = function(){
+  weekly.destroy();
 };
 
 /*
