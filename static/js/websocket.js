@@ -6,21 +6,24 @@ $(document).ready(function(){
     sock.on('draw', function(data){
         if (_mode===1){
             console.log('mode 1');
-            //updateDonut();
+            live_data = data['live'];
+            updateDonut(live_data['Play'], live_data['Rest'], live_data['Active']);
         }
         else if (_mode===2){
             console.log('mode 2');
-            //updateStackedBar();
+            daily_data = data['daily'];
+            updateStackedBar(daily_data['Play'], daily_data['Rest'], daily_data['Active']);
         }
         else{
             console.log('mode 3');
-            //updateBar();
+            weekly_data = data['weekly'];
+            updateBar(weekly_data);
         }
     });
 
     // change mode
     $('#live').on('click', function(){
-        // pie.js
+        // donut.js
         _mode = 1
         sock.emit('change', {'mode': 1});
     });

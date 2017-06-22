@@ -20,16 +20,21 @@ example = {
 '''
 
 while True:
-    #with SocketIO('localhost', 8000, LogginNamespace) as socketIO:
-    with SocketIO('52.231.53.33', 80, LoggingNamespace) as socketIO:
+    with SocketIO('localhost', 8000, LogginNamespace) as socketIO:
+    #with SocketIO('52.231.53.33', 80, LoggingNamespace) as socketIO:
         send_data = {
-            'weekly': [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 177.0],
-            'daily': {'Play': 20, 'Rest': 40, 'Active': 24},
+            'weekly': ['weekly', 24, 50, 10, 30, 16, 40, 5],
+            'daily':{
+                'Play': ['Play', 40],
+                'Rest': ['Rest', 40],
+                'Active': ['Active', 20]
+            },
             'live': {
-                'active_chart': {'Active': 56.33, 'Rest': 24.03},
-                'play_chart': {'Play': 70.33, 'Rest': 30}
+                'Play': ['Play', 20],
+                'Rest': ['Rest', 60],
+                'Active': ['Active', 20]
             }
         }
 
         socketIO.emit('data', send_data)
-        time.sleep(0.5)
+        time.sleep(1)
