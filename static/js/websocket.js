@@ -2,7 +2,6 @@ var _mode = 1
 
 $(document).ready(function(){
     var sock = io.connect('http://localhost:8000');
-    //var sock = io.connect('http://52.231.35.33');
 
     clearDonut();
     
