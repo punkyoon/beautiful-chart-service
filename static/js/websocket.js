@@ -25,20 +25,17 @@ $(document).ready(function(){
         // donut.js
         _mode = 1
         clearDonut();
-        sock.emit('change', {'mode': 1});
     });
 
     $('#daily').on('click', function(){
         // stacked_bar.js
         _mode = 2
         clearStackedBar();
-        sock.emit('change', {'mode': 2});
     });
     
     $('#weekly').on('click', function(){
         // bar.js
         _mode = 3
         clearBar();
-        sock.emit('change', {'mode': 3});
     });
 });

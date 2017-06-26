@@ -7,26 +7,12 @@ app.secret_key = 'mysecret'
 
 socket_io = SocketIO(app)
 
-# _mode
-# 1 = live / 2 = daily / 3 = weekly
-_mode = 1
-
 @app.route('/')
 def draw():
     return render_template('main.html')
 
-# Chaninging Mode
-@socket_io.on('change')
-def change_mode(data):
-    global _mode
-
-    print('receive data: '+str(data))
-    #emit('draw', data, broadcast=True)
-
 @socket_io.on('data')
 def draw_data(data):
-    global _mode
-
     print('receive data: '+str(data))
     emit('draw', data, broadcast=True)
 
